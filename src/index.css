@@ -1,0 +1,186 @@
+/* ======================== google font : Nunito */
+
+/* ======================== default body structure */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif !important;
+  position: relative;
+}
+
+/* ======================== custom layout define */
+
+/* ======================== Form Layout define */
+.form_layout {
+  display: flex;
+  flex-direction: column;
+  width: 660px;
+  gap: 24px;
+}
+
+/* ======================== Custom checkbox design */
+input[id="cb1"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00c0b3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[id="cb1"]:checked + label:after {
+  position: relative;
+  top: -4px;
+  left: 0;
+  content: "\2714";
+  font-size: 14px;
+}
+input[id="cb1"] {
+  display: none;
+}
+
+.input_checkbox {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  column-gap: 8px;
+  width: 100%;
+}
+
+.select_btn_menu {
+  border-radius: 30px;
+  padding: 9px 13px;
+  cursor: pointer;
+  color: #4c4c4c;
+}
+.select_btn {
+  width: 66px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: #4c4c4c;
+  border: 1px solid #4c4c4c;
+}
+
+/* ========================= error message style */
+
+.error {
+  color: red;
+}
+.error::after {
+  content: "*";
+}
+
+/* ========================= background shape design */
+.shape1 {
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.shape2 {
+  position: absolute;
+  top: -111%;
+  left: -5px;
+}
+
+.store_img {
+  width: 190px;
+}
+
+/* ========================= responsive handler start  ================================*/
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .form_layout {
+    width: 290px;
+  }
+
+  input[id="cb1"] + label {
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    border: 2px solid #00c0b3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .input_checkbox {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .store_img {
+    width: 140px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .form_layout {
+    width: 300px;
+  }
+  .store_img {
+    width: 167px;
+  }
+  .input_checkbox {
+    width: 70%;
+    margin: 0 auto;
+  }
+  input[id="cb1"] + label {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    border: 2px solid #00c0b3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+/* ========================= background shape responsive handling for all devices */
+@media (min-width: 300px) {
+  .shape1 {
+    display: none;
+  }
+  .shape2 {
+    display: none;
+  }
+}
+@media (min-width: 924px) {
+  .shape1 {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: -8%;
+  }
+  .shape2 {
+    display: block;
+    position: absolute;
+    top: -111%;
+  }
+}
+@media (min-width: 1024px) {
+  .shape1 {
+    position: absolute;
+    top: 10%;
+    right: -5%;
+  }
+  /* .shape2 {
+    position: absolute;
+    top: -99%;
+  } */
+  .store_img {
+    width: 190px;
+  }
+}
+@media (min-width: 1280px) {
+  .shape1 {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  /* .shape2 {
+    position: absolute;
+    top: -99%;
+  } */
+}
